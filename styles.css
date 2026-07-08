@@ -363,91 +363,38 @@ a:hover {
   margin-bottom: 1.35rem;
   overflow: hidden;
   border-radius: 6px;
-  background: #151917;
 }
 
-.work-visual span {
-  position: absolute;
-  display: block;
-  border-radius: 4px;
+.product-logo-visual {
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(17, 22, 20, 0.08);
+  background: #f5f8f6;
 }
 
-.terminal-visual span:nth-child(1) {
-  inset: 1.1rem auto auto 1.1rem;
-  width: 42%;
-  height: 0.55rem;
-  background: var(--teal);
+.product-logo-visual img {
+  width: min(58%, 8.5rem);
+  height: auto;
+  max-height: 8.5rem;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 20px rgba(17, 22, 20, 0.16));
 }
 
-.terminal-visual span:nth-child(2) {
-  inset: 3.2rem 1.1rem auto 1.1rem;
-  height: 4.4rem;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+.ai-term-logo {
+  background: #eef3f8;
 }
 
-.terminal-visual span:nth-child(3) {
-  right: 1.1rem;
-  bottom: 1.1rem;
-  width: 38%;
-  height: 2.1rem;
-  background: rgba(57, 92, 207, 0.82);
+.ballistictracker-logo {
+  background: #f6f7f2;
 }
 
-.tracker-visual {
-  background: #f0f4f1;
+.ballistictracker-logo img {
+  width: min(72%, 9.5rem);
+  max-height: 9.5rem;
 }
 
-.tracker-visual span:nth-child(1) {
-  inset: 1rem;
-  border: 1px solid rgba(17, 22, 20, 0.18);
-  border-radius: 50%;
-}
-
-.tracker-visual span:nth-child(2) {
-  left: 50%;
-  top: 50%;
-  width: 38%;
-  height: 2px;
-  background: var(--coral);
-  transform: rotate(-18deg);
-  transform-origin: left center;
-}
-
-.tracker-visual span:nth-child(3) {
-  left: 30%;
-  top: 34%;
-  width: 1rem;
-  height: 1rem;
-  background: var(--amber);
-  border-radius: 50%;
-}
-
-.expense-visual {
-  background: #f5f7fb;
-}
-
-.expense-visual span:nth-child(1) {
-  left: 1.1rem;
-  top: 1.1rem;
-  width: 58%;
-  height: 2rem;
-  background: var(--blue);
-}
-
-.expense-visual span:nth-child(2) {
-  left: 1.1rem;
-  top: 4.1rem;
-  width: 76%;
-  height: 1.15rem;
-  background: rgba(17, 22, 20, 0.16);
-}
-
-.expense-visual span:nth-child(3) {
-  left: 1.1rem;
-  top: 6.3rem;
-  width: 48%;
-  height: 1.15rem;
-  background: var(--teal);
+.expenseonthego-logo {
+  background: #eef5ee;
 }
 
 .work-kicker {
