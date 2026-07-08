@@ -252,6 +252,70 @@ a:hover {
   padding: 5rem 0;
 }
 
+.company-section {
+  background: var(--paper);
+}
+
+.company-layout {
+  display: grid;
+  gap: 2rem;
+}
+
+.company-copy {
+  max-width: 760px;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.company-copy p {
+  margin: 0;
+}
+
+.company-copy p + p {
+  margin-top: 1rem;
+}
+
+.lifecycle-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.lifecycle-card {
+  position: relative;
+  min-height: 18rem;
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 1px 0 rgba(17, 22, 20, 0.04);
+}
+
+.lifecycle-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-bottom: 3rem;
+  border-radius: 6px;
+  background: #e8f5f1;
+  color: var(--teal-deep);
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.lifecycle-card h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.lifecycle-card p {
+  margin: 0.75rem 0 0;
+  color: var(--ink-soft);
+}
+
 .work-section {
   background: var(--paper-strong);
 }
@@ -567,6 +631,10 @@ a:hover {
   .work-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .lifecycle-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 1040px) {
@@ -580,6 +648,7 @@ a:hover {
   }
 
   .capabilities-layout,
+  .company-layout,
   .method-layout,
   .contact-layout {
     grid-template-columns: 0.92fr 1.08fr;
