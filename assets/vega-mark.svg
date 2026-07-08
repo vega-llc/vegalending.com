@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Vega LLC mark</title>
+  <desc id="desc">A geometric V mark for Vega LLC.</desc>
+  <rect width="64" height="64" rx="12" fill="#111614"/>
+  <path d="M14 14h10l9 27 9-27h8L36 50h-8L14 14z" fill="#29a98b"/>
+  <path d="M40 14h10L36 50h-8l4-10 8-26z" fill="#d99729" opacity=".9"/>
+</svg>
