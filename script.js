@@ -12,7 +12,7 @@
     "receipt",
     "private",
     "no surprise spend",
-    "stays warm",
+    "fast",
     "your call",
     "AI-Term",
     "BallisticTracker",

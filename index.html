@@ -16,6 +16,10 @@
     >
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vegalending.com/">
+    <meta property="og:image" content="https://vegalending.com/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Vega LLC: local when it's good enough, cloud when it counts, receipts either way.">
     <meta name="theme-color" content="#111614">
     <link rel="icon" href="assets/vega-mark.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css?v=20260902c">
@@ -25,7 +29,7 @@
         "@type": "Organization",
         "name": "Vega LLC",
         "url": "https://vegalending.com/",
-        "description": "New York City area high-tech startup that ships real software (AI-Term, BallisticTracker, ExpenseOnTheGo, PalmScan AI) and is building Vega Router: evidence-grade AI plumbing that routes work between local models on Apple Silicon and frontier cloud models, with a receipt for every decision.",
+        "description": "New York City area high-tech startup that ships real software (AI-Term, BallisticTracker, ExpenseOnTheGo, PalmScan AI) and is building Vega Router: AI plumbing that keeps work on your Mac when it's good enough, uses the cloud when it counts, and leaves a receipt for every decision.",
         "sameAs": [
           "https://github.com/vega-llc",
           "https://ai-term.com/",
@@ -70,8 +74,8 @@
           </ul>
           <p class="hero-copy">
             Vega Router keeps routine AI work on your Mac, rents a frontier cloud model only
-            when it counts, and leaves a receipt for every decision. Everyone running local and
-            cloud models knows the gap; Vega built v1 in a week. That is how we work on every
+            when it counts, and leaves a receipt for every decision. Anyone running local and
+            cloud models has felt the gap; Vega built v1 in a week. That is how we work on every
             hard problem &mdash; yours included.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
@@ -97,17 +101,17 @@
             <h2 id="router-title">Local when it's good enough. Cloud when it counts. Receipts either way.</h2>
             <ul class="router-status" aria-label="Vega Router status">
               <li>v1 running daily</li>
-              <li>24-agent adversarial review &middot; every finding fixed</li>
+              <li>24-agent adversarial review of v1 &middot; every finding fixed</li>
               <li>Open-core planned &middot; fall 2026</li>
             </ul>
             <p>
-              The missing middle is a well-known gap: nobody routes work between the models on
-              your Mac and the frontier cloud, and nobody shows you what your hybrid setup costs
-              &mdash; because labs lose revenue when work routes away, and Apple sells silicon,
-              not models. We hit it ourselves, juggling seven model lanes on one Mac, and built
-              v1 in a week. It is not an AI guessing the perfect model. It is a policy you can
-              read, a cheap route made safe enough to trust, and evidence for the times it
-              wasn't.
+              The missing middle is a well-known gap: sending each piece of work to the right
+              model &mdash; the one on your Mac or the one in the cloud &mdash; is still a
+              do-it-yourself project, and almost nothing tells you what your hybrid setup
+              actually costs or whether the cheap answer held up. We hit it ourselves, running
+              local and cloud models side by side on one Mac, and built v1 in a week. It is not
+              an AI guessing the perfect model. It is a policy you can read, a cheap route made
+              safe enough to trust, and evidence for the times it wasn't.
             </p>
           </div>
 
@@ -116,9 +120,8 @@
               <p class="router-node-label">Local lane &middot; your Mac</p>
               <h3>Routine work stays home</h3>
               <p>
-                Open models that live in your Mac's own memory &mdash; 128&nbsp;GB on the M4
-                Max it runs on today. The routine majority of work lands here and stays warm
-                and fast from one turn to the next. No network hop. No meter.
+                Open models running on your own Apple Silicon Mac. The routine majority of
+                work lands here and comes back fast. No network hop. No meter.
               </p>
             </article>
 
@@ -127,46 +130,41 @@
               <p class="router-node-label router-core-label">Vega Router</p>
               <h3>Rules you can read, not guesses</h3>
               <p>
-                One ordered policy, first match wins, written in plain language you can open
-                and read. In v1 nothing is scored by a model that might quietly guess wrong; the
-                rule that fired is written on the receipt. It works with the tools you already
-                use &mdash; nothing to switch to. And when you know better than the rules, one
-                word from you wins.
+                A written policy decides where each piece of work goes &mdash; plain language
+                you can open, read, and change. Nothing is scored by a model that might quietly
+                guess wrong, and the reason for every decision is on the receipt. It works
+                alongside the tools you already use.
               </p>
-              <ol class="router-signals router-signals-policy" aria-label="What the policy asks, in order">
-                <li><span class="policy-index">01</span>Did you say where this goes?</li>
-                <li><span class="policy-index">02</span>Would this spend money?</li>
-                <li><span class="policy-index">03</span>Does the Mac have what it needs?</li>
-                <li><span class="policy-index">04</span>Then it stays home.</li>
-              </ol>
+              <ul class="router-signals" aria-label="What makes the policy trustworthy">
+                <li>Written down, not learned</li>
+                <li>Yours to read and change</li>
+                <li>Overridden by you, never by a file</li>
+                <li>Explained on every receipt</li>
+              </ul>
             </div>
 
             <article class="router-node">
               <p class="router-node-label">Cloud lane &middot; frontier</p>
               <h3>The hard part, on purpose</h3>
               <p>
-                Reached through OpenRouter and Amazon Bedrock for the work that earns it &mdash;
-                the hard minority that genuinely needs the largest models. An explicit cloud
-                lane never silently falls back to local, and a choice you made is never quietly
-                rerouted to a different provider. Nothing lands here by accident, and everything
-                that does leaves a receipt.
+                The largest models, for the work that earns them &mdash; the hard minority that
+                genuinely needs them. A choice you made is honored exactly, never quietly
+                changed, and everything that runs here leaves a receipt.
               </p>
             </article>
           </div>
 
           <div class="router-evidence">
             <article class="router-receipt" aria-labelledby="receipt-title">
-              <p class="development-index" id="receipt-title">Sample receipt &middot; metadata only</p>
+              <p class="development-index" id="receipt-title">What a receipt answers</p>
               <dl class="receipt-rows">
-                <dt>where it ran</dt>
-                <dd>your Mac</dd>
-                <dt>why</dt>
-                <dd>the policy said it fits</dd>
-                <dt>time &middot; tokens &middot; cost</dt>
-                <dd>logged</dd>
-                <dt>quality signals</dt>
-                <dd>logged</dd>
-                <dt>prompt content</dt>
+                <dt>Where did it run?</dt>
+                <dd>your Mac or the cloud &mdash; and why</dd>
+                <dt>What did it cost?</dt>
+                <dd>time and money, per request</dd>
+                <dt>Did it hold up?</dt>
+                <dd>whether the cheap route was good enough</dd>
+                <dt>What did I write?</dt>
                 <dd class="receipt-never">never logged</dd>
               </dl>
             </article>
@@ -175,24 +173,24 @@
               <p class="work-kicker">Dispatch Desk &middot; in design &middot; split plan</p>
               <h3>Split plans: the private part stays home, only the hard part goes out</h3>
               <p>
-                Dispatch Desk, the native Mac app now in design, will read each request on
-                your Mac first and <em>propose</em> a plan &mdash; local, cloud, or split
-                &mdash; with an estimated cost. It runs only after you approve, with receipts.
-                Example: summarize a 40-page PDF, then write a legal-grade memo. The PDF never
-                leaves the Mac; only a summary and the instructions do.
+                Dispatch Desk, the native Mac app now in design, is meant to show you the plan
+                before anything runs &mdash; what would stay on the Mac, what would go out,
+                and what it would cost &mdash; and to run it only on your say-so. Picture a
+                40-page PDF and a legal-grade memo to write from it: the plan would keep the
+                PDF on the Mac and send out only what the memo needs.
               </p>
-              <ol class="split-flow" aria-label="Split plan example">
+              <ol class="split-flow" aria-label="How a split plan would work">
                 <li class="split-step split-step-local">
-                  <span class="split-label">Stays on the Mac</span>
-                  40-page PDF
+                  <span class="split-label">Would stay home</span>
+                  The document
                 </li>
                 <li class="split-step split-step-router">
-                  <span class="split-label">Leaves the Mac</span>
-                  Local summary + memo instructions
+                  <span class="split-label">Would go out</span>
+                  Only what the memo needs
                 </li>
                 <li class="split-step split-step-cloud">
-                  <span class="split-label">Frontier model</span>
-                  Writes the memo
+                  <span class="split-label">Would come back</span>
+                  The memo
                 </li>
               </ol>
             </article>
@@ -200,12 +198,13 @@
 
           <aside class="router-quote" aria-label="Vega's thesis">
             <p class="router-thesis">
-              Own the runtime. Hire the frontier model for the jobs only it can do &mdash; and
-              stop paying rent on everything else.
+              Run what you can on hardware you own. Buy the biggest models by the job, for the
+              few jobs that need them &mdash; not by the month, for everything.
             </p>
             <p class="router-thesis-note">
               The thesis behind Vega Router, and behind how Vega builds: keep the durable parts
-              of the work where you control them, and buy intelligence by the job.
+              of the work where you control them, and pay for intelligence only where it earns
+              its keep.
             </p>
           </aside>
 
@@ -216,8 +215,7 @@
               <h3>Private by default</h3>
               <p>
                 Local is the default. Work moves to the cloud only when you send it there
-                &mdash; by your word, your lane, or a plan you approved. Nothing inside a file,
-                a repo, or a tool's output can redirect it.
+                &mdash; and only you can send it.
               </p>
             </article>
             <article class="router-card">
@@ -242,9 +240,9 @@
               <span class="router-card-index">04</span>
               <h3>Nothing captive</h3>
               <p>
-                Your project notes and standing instructions live as plain files you own,
-                readable by any model or tool, so the work comes with you when a better model
-                ships. Files, not custody.
+                Your project notes and standing instructions stay yours, readable by any model
+                or tool, so the work comes with you when a better model ships. Nothing is held
+                hostage.
               </p>
             </article>
           </div>
@@ -265,8 +263,7 @@
             </div>
             <p class="router-note">
               Where it stands: v1 runs daily on the founder's M4 Max; Dispatch Desk, the native
-              Mac app, is in design; the open-core release (rule engine open source) is planned
-              for fall 2026. Early access is a conversation, not an order form.
+              Mac app, is in design; the open-core release is planned for fall 2026. Early access is a conversation, not an order form.
             </p>
           </div>
         </div>
@@ -675,7 +672,7 @@
           <div>
             <p class="eyebrow">Work with Vega LLC</p>
             <h2 id="contact-title">Bring us the workflow everyone knows is broken.</h2>
-            <p class="contact-sub">Or the layer nobody was paid to build. We'll build it.</p>
+            <p class="contact-sub">Or the layer that was still missing. We'll build it.</p>
           </div>
           <a class="button button-primary contact-button" href="mailto:dev@vegalending.com?subject=Vega%20LLC%20software%20inquiry">
             dev@vegalending.com

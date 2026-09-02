@@ -287,7 +287,7 @@ a:hover {
   margin: 2.3rem 0 0;
   padding: 0;
   list-style: none;
-  color: rgba(255, 255, 255, 0.68);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .product-strip a {
@@ -301,7 +301,6 @@ a:hover {
 }
 
 .strip-status {
-  opacity: 0.85;
   font-size: 0.92em;
 }
 
@@ -610,26 +609,6 @@ a:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 
-.router-signals-policy {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.86rem;
-}
-
-.router-signals-policy li {
-  display: grid;
-  grid-template-columns: 2.4rem 1fr;
-  gap: 0.5rem;
-  align-items: baseline;
-}
-
-.policy-index {
-  color: #6ee3c7;
-  font-size: 0.74rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
 .router-evidence {
   display: grid;
   grid-template-columns: 1fr;
@@ -654,7 +633,8 @@ a:hover {
 .receipt-rows {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 0.45rem 1.25rem;
+  gap: 0.9rem 1.25rem;
+  align-content: start;
   margin: 0;
   font-size: 0.9rem;
 }
@@ -766,12 +746,6 @@ a:hover {
   margin: 0.6rem 0 0;
   color: var(--ink-soft);
   font-size: 0.97rem;
-}
-
-.router-card .router-card-mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.78rem;
-  color: rgba(17, 22, 20, 0.62);
 }
 
 .router-quote {
@@ -1368,9 +1342,6 @@ a:hover {
     min-height: 0;
   }
 
-  .router-signals-policy li {
-    grid-template-columns: 2.2rem 1fr;
-  }
 
   .capability-item {
     grid-template-columns: 2.8rem 1fr;
