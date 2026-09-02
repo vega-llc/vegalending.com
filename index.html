@@ -46,9 +46,9 @@
           <span>Vega LLC</span>
         </a>
         <div class="nav-links" aria-label="Primary navigation">
-          <a href="#company">Company</a>
-          <a href="#work">Work</a>
           <a href="#router">Router <span class="nav-pill">v1</span></a>
+          <a href="#work">Work</a>
+          <a href="#company">Company</a>
           <a href="#development">Development</a>
           <a href="#capabilities">Capabilities</a>
           <a href="#contact">Contact</a>
@@ -69,9 +69,9 @@
             <li class="hero-chip hero-chip-receipt">Receipts either way.</li>
           </ul>
           <p class="hero-copy">
-            Vega Router keeps routine AI work on your Mac, rents the frontier only when it
-            counts, and leaves a receipt for every decision. The gap was named in public; Vega
-            built v1 the same week. That is how we work on every hard problem &mdash; yours
+            Vega Router keeps routine AI work on your Mac, rents a frontier cloud model only
+            when it counts, and leaves a receipt for every decision. The industry named the gap;
+            Vega built v1 the same week. That is how we work on every hard problem &mdash; yours
             included.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
@@ -97,17 +97,16 @@
             <h2 id="router-title">Local when it's good enough. Cloud when it counts. Receipts either way.</h2>
             <ul class="router-status" aria-label="Vega Router status">
               <li>v1 running daily</li>
-              <li>Smoke + golden tests passing</li>
-              <li>24-agent review &middot; 19 findings fixed</li>
+              <li>24-agent adversarial review &middot; every finding fixed</li>
               <li>Open-core planned &middot; fall 2026</li>
             </ul>
             <p>
               Nate B. Jones named the missing middle: nobody routes work between the models on
               your Mac and the frontier cloud, and nobody shows you what your hybrid setup costs
               &mdash; because labs lose revenue when work routes away, and Apple sells silicon,
-              not models. Vega built v1 the same week. Not AI guessing the perfect model: a
-              policy you can read, a cheap route made safe enough, and evidence when that claim
-              is false.
+              not models. Vega built v1 the same week. It is not an AI guessing the perfect
+              model. It is a policy you can read, a cheap route made safe enough to trust, and
+              evidence for the times it wasn't.
             </p>
           </div>
 
@@ -116,10 +115,11 @@
               <p class="router-node-label">Local lane &middot; your Mac</p>
               <h3>Routine work stays home</h3>
               <p>
-                Open-weight models resident in unified memory &mdash; 128&nbsp;GB on the M4 Max
-                it runs on today. Small chat, tool and agent work, and the default route all
-                land here, pinned to one model so the next turn is warm. No network hop. No
-                meter.
+                Open models that live in your Mac's own memory &mdash; 128&nbsp;GB on the M4
+                Max it runs on today. Small chat, tool and agent work, and the default route
+                all land here. A warm session answers in 3.6&nbsp;s; a cold one takes
+                74&ndash;180&nbsp;s, which is why the router pins a session to one model. No
+                network hop. No meter.
               </p>
             </article>
 
@@ -128,9 +128,10 @@
               <p class="router-node-label router-core-label">Vega Router</p>
               <h3>Rules you can read, not guesses</h3>
               <p>
-                One ordered policy, first match wins. Nothing is scored by a model that might
-                quietly guess wrong; the rule that fired is written on the receipt. When you
-                know better than the rules, you say so &mdash; and that is rule one.
+                One ordered policy, first match wins. In v1 nothing is scored by a model that
+                might quietly guess wrong; the rule that fired is written on the receipt. One
+                standard endpoint, so Claude Code, Codex, Msty, or any chat client just points
+                at it. When you know better than the rules, you say so &mdash; that is rule one.
               </p>
               <ol class="router-signals router-signals-policy" aria-label="Routing policy, first match wins">
                 <li><span class="policy-index">01</span>Your override wins: #cloud &middot; #local &middot; #fast &middot; #deep</li>
@@ -148,21 +149,11 @@
               <p>
                 Reached through OpenRouter and Amazon Bedrock for the work that earns it &mdash;
                 the premium slice Nate B. Jones puts at the top 10&ndash;20%. An explicit cloud
-                lane never silently falls back to local, and an explicit decision is never
-                re-vendored. Nothing lands here by accident, and everything that does leaves a
-                receipt.
+                lane never silently falls back to local, and a choice you made is never quietly
+                rerouted to a different provider. Nothing lands here by accident, and everything
+                that does leaves a receipt.
               </p>
             </article>
-          </div>
-
-          <div class="router-overrides" aria-label="Override tokens">
-            <code class="router-token">#cloud</code>
-            <code class="router-token">#local</code>
-            <code class="router-token">#fast</code>
-            <code class="router-token">#deep</code>
-            <p class="router-overrides-note">
-              Honored only in what you typed &mdash; never in file contents or tool results.
-            </p>
           </div>
 
           <div class="router-evidence">
@@ -190,14 +181,15 @@
 
             <article class="router-split">
               <p class="work-kicker">Dispatch Desk &middot; in design &middot; split plan</p>
-              <h3>Split plans: bits to the garage, bits to a taxi</h3>
+              <h3>Split plans: the private part stays home, only the hard part goes out</h3>
               <p>
-                Dispatch Desk, the native Mac app now in design, will put a sub-second local
-                triage model in front of every message. The triage brain already runs on the
-                founder's Mac: 0.4&nbsp;s warm, measured. The app will show its plan &mdash;
-                local, cloud, or split &mdash; with an estimated cost, then execute with
-                receipts. Measured triage example: summarize a 40-page PDF, then write a
-                legal-grade memo. The split keeps the PDF on the Mac.
+                Dispatch Desk, the native Mac app now in design, will put a fast local triage
+                model in front of every message to <em>propose</em> a plan &mdash; local,
+                cloud, or split &mdash; with an estimated cost. It will run only after you
+                approve, with receipts; the rules above still decide anything the plan leaves
+                open. The triage brain already runs on the founder's Mac: 0.4&nbsp;s warm,
+                measured. Measured example: summarize a 40-page PDF, then write a legal-grade
+                memo. The split keeps the PDF on the Mac.
               </p>
               <ol class="split-flow" aria-label="Split plan example">
                 <li class="split-step split-step-local">
@@ -216,55 +208,15 @@
             </article>
           </div>
 
-          <p class="eyebrow router-grid-eyebrow">Proof &middot; what runs today</p>
-          <div class="router-grid">
-            <article class="router-card">
-              <span class="router-card-index">01</span>
-              <h3>Receipts on every call</h3>
-              <p>
-                Which rule fired and why, latency, tokens, cost estimate, quality flags &mdash;
-                logged for every request. Metadata only, never prompt content. You can finally
-                answer: what fraction of my work ran local, and what did the rest cost me?
-              </p>
-            </article>
-            <article class="router-card">
-              <span class="router-card-index">02</span>
-              <h3>Warm 3.6&nbsp;s. Cold 74&ndash;180&nbsp;s.</h3>
-              <p>
-                That gap is why session stickiness is a first-class rule. A router that bounces
-                a session between models destroys local agent work; Vega Router pins the session
-                to one model and protects the warm cache.
-              </p>
-            </article>
-            <article class="router-card">
-              <span class="router-card-index">03</span>
-              <h3>One endpoint, any front-end</h3>
-              <p>
-                Claude Code, Codex, Msty, or any chat client just points at it. A standard
-                endpoint, not another app to live in.
-              </p>
-              <p class="router-card-mono">Anthropic Messages &middot; OpenAI Chat Completions &middot; OpenAI Responses</p>
-            </article>
-            <article class="router-card">
-              <span class="router-card-index">04</span>
-              <h3>Reviewed like it matters</h3>
-              <p>
-                v1 runs daily on the founder's M4 Max. Smoke and golden contract tests pass. A
-                24-agent adversarial review surfaced 19 findings, all fixed the same day. Routing
-                is a trust product, so it gets tested like one.
-              </p>
-            </article>
-          </div>
-
           <figure class="router-quote">
             <blockquote>
               <p>You hire it for the job it's best at, and you stop renting it the rest of your life.</p>
             </blockquote>
             <figcaption>
-              Nate B. Jones on the frontier model's place in a personal AI stack, in
-              &ldquo;RTX 5090, Mac Studio, or DGX Spark? I tried all three&rdquo; (AI News &amp;
-              Strategy Daily). Days later he named the missing middle and asked his audience to
-              build it; Vega Router is Vega's build. No affiliation or endorsement.
+              Nate B. Jones, AI News &amp; Strategy Daily, on the frontier model's place in a
+              personal AI stack (May 2026). That August he named the missing middle and asked
+              his audience to build it; Vega Router is Vega's build. No affiliation or
+              endorsement.
             </figcaption>
           </figure>
 
@@ -282,7 +234,7 @@
             </article>
             <article class="router-card">
               <span class="router-card-index">02</span>
-              <h3>A real cost floor</h3>
+              <h3>No surprise spend</h3>
               <p>
                 The router never auto-spends. Long-context work is flagged for the cloud and
                 waits for your call. Money moves only when you decided it should, and the receipt
@@ -312,16 +264,22 @@
 
           <div class="router-close">
             <p class="router-bridge">
-              This is how Vega builds: rules you can read, evidence you can check. Bring us yours.
+              This is how Vega builds: rules you can read, evidence you can check. Want Vega
+              Router on your Mac before the open-core release &mdash; or this kind of rigor on
+              your own hard problem?
             </p>
-            <a class="button button-primary button-on-light" href="mailto:dev@vegalending.com?subject=Vega%20Router%20early%20access">
-              Ask about early access
-            </a>
+            <div class="router-close-actions" aria-label="Router actions">
+              <a class="button button-primary button-on-light" href="mailto:dev@vegalending.com?subject=Vega%20Router%20early%20access">
+                Ask about early access
+              </a>
+              <a class="button button-outline-light" href="mailto:dev@vegalending.com?subject=A%20hard%20problem%20for%20Vega%20LLC">
+                Bring us your hard problem
+              </a>
+            </div>
             <p class="router-note">
-              Status, plainly: v1 runs daily on the founder's M4 Max; Dispatch Desk, the native
+              Where it stands: v1 runs daily on the founder's M4 Max; Dispatch Desk, the native
               Mac app, is in design; the open-core release (rule engine open source) is planned
-              for fall 2026. Not a shipped consumer product yet &mdash; we are inviting early
-              conversations, not taking orders.
+              for fall 2026. Early access is a conversation, not an order form.
             </p>
           </div>
         </div>
@@ -442,7 +400,7 @@
             </p>
             <p>
               Vega focuses on quality, robust, user-friendly products that deliver long-term
-              business value at prices that make modernization accessible.
+              business value on terms that make modernization accessible.
             </p>
           </div>
         </div>
@@ -513,8 +471,8 @@
                   <h4>Inferencer Admin MCP</h4>
                   <p>
                     A local AI operations layer for managing, evaluating, and coordinating
-                    on-device models. It supplies the model inventory, benchmarks, and health
-                    signals that Vega Router's decisions depend on.
+                    on-device models. It supplies the model inventory and health signals underneath
+                    Vega Router's local lane.
                   </p>
                 </article>
 

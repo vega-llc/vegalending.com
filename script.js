@@ -153,19 +153,13 @@
     }
   }
 
+  // draw() schedules its own next frame, so exactly one loop runs at a time.
   window.addEventListener("resize", () => {
     window.cancelAnimationFrame(animationFrame);
     resize();
     draw();
-    if (!reduceMotion) {
-      animationFrame = window.requestAnimationFrame(draw);
-    }
   });
 
   resize();
   draw();
-
-  if (!reduceMotion) {
-    animationFrame = window.requestAnimationFrame(draw);
-  }
 })();

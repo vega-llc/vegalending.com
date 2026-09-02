@@ -7,7 +7,7 @@
   --teal: #29a98b;
   --teal-deep: #147965;
   --amber: #d99729;
-  --amber-deep: #9a6a12;
+  --amber-deep: #8f6210;
   --coral: #e45c3e;
   --blue: #395ccf;
   --shadow: 0 22px 60px rgba(17, 22, 20, 0.12);
@@ -157,7 +157,7 @@ a:hover {
 }
 
 .hero-scrim {
-  background: rgba(17, 22, 20, 0.62);
+  background: rgba(17, 22, 20, 0.72);
 }
 
 .hero-content {
@@ -187,7 +187,7 @@ a:hover {
 }
 
 .hero .eyebrow {
-  color: var(--teal);
+  color: #6ee3c7;
 }
 
 .hero-kicker {
@@ -630,30 +630,6 @@ a:hover {
   text-transform: uppercase;
 }
 
-.router-overrides {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem 1rem;
-  margin-top: 1rem;
-}
-
-.router-token {
-  padding: 0.3rem 0.6rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: #ffffff;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.82rem;
-  font-weight: 700;
-}
-
-.router-overrides-note {
-  margin: 0;
-  color: var(--ink-soft);
-  font-size: 0.92rem;
-}
-
 .router-evidence {
   display: grid;
   grid-template-columns: 1fr;
@@ -835,8 +811,23 @@ a:hover {
   font-weight: 700;
 }
 
-.router-close .button {
-  margin-top: 1rem;
+.router-close-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.1rem;
+}
+
+.button-outline-light {
+  border-color: rgba(17, 22, 20, 0.32);
+  color: var(--ink);
+  background: transparent;
+}
+
+.button-outline-light:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+  background: rgba(17, 22, 20, 0.05);
 }
 
 .button-on-light {
@@ -1048,7 +1039,7 @@ a:hover {
 }
 
 .capability-index {
-  color: var(--coral);
+  color: #b8401f;
   font-weight: 850;
 }
 
@@ -1200,7 +1191,7 @@ a:hover {
   }
 
   .split-step + .split-step::before {
-    content: "\2192";
+    content: "\2192" / "";
     position: absolute;
     left: -1.35rem;
     top: 50%;
@@ -1329,8 +1320,22 @@ a:hover {
 
   .hero {
     min-height: 88svh;
-    padding-top: 10rem;
+    padding-top: 9rem;
     padding-bottom: 3rem;
+  }
+
+  .hero-kicker {
+    gap: 0.35rem;
+    margin-top: 0.85rem;
+  }
+
+  .hero-chip {
+    padding: 0.28rem 0.6rem;
+    font-size: 0.72rem;
+  }
+
+  .router-close-actions .button {
+    width: 100%;
   }
 
   .hero h1 {
