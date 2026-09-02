@@ -6,17 +6,18 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const colors = ["#29a98b", "#d99729", "#e45c3e", "#395ccf"];
   const labels = [
+    "Vega Router",
+    "rule \u2192 local",
+    "receipt",
+    "#cloud",
+    "#local",
+    "3.6 s warm",
+    "0.4 s triage",
+    "sticky session",
     "AI-Term",
     "BallisticTracker",
     "ExpenseOnTheGo",
     "PalmScan AI",
-    "Vega Router",
-    "routing",
-    "workflow",
-    "operator",
-    "model",
-    "data",
-    "ship",
   ];
 
   let width = 0;
@@ -33,7 +34,7 @@
     phase: Math.random() * Math.PI * 2,
   }));
 
-  const panels = Array.from({ length: 9 }, (_, index) => ({
+  const panels = Array.from({ length: labels.length }, (_, index) => ({
     x: Math.random(),
     y: Math.random(),
     width: 118 + Math.random() * 118,
