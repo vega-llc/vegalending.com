@@ -117,10 +117,8 @@
               <h3>Routine work stays home</h3>
               <p>
                 Open models that live in your Mac's own memory &mdash; 128&nbsp;GB on the M4
-                Max it runs on today. Small chat, tool and agent work, and the default route
-                all land here. A warm session answers in 3.6&nbsp;s; a cold one takes
-                74&ndash;180&nbsp;s, which is why the router pins a session to one model. No
-                network hop. No meter.
+                Max it runs on today. The routine majority of work lands here and stays warm
+                and fast from one turn to the next. No network hop. No meter.
               </p>
             </article>
 
@@ -129,18 +127,17 @@
               <p class="router-node-label router-core-label">Vega Router</p>
               <h3>Rules you can read, not guesses</h3>
               <p>
-                One ordered policy, first match wins. In v1 nothing is scored by a model that
-                might quietly guess wrong; the rule that fired is written on the receipt. One
-                standard endpoint, so Claude Code, Codex, Msty, or any chat client just points
-                at it. When you know better than the rules, you say so &mdash; that is rule one.
+                One ordered policy, first match wins, written in plain language you can open
+                and read. In v1 nothing is scored by a model that might quietly guess wrong; the
+                rule that fired is written on the receipt. It works with the tools you already
+                use &mdash; nothing to switch to. And when you know better than the rules, one
+                word from you wins.
               </p>
-              <ol class="router-signals router-signals-policy" aria-label="Routing policy, first match wins">
-                <li><span class="policy-index">01</span>Your override wins: #cloud &middot; #local &middot; #fast &middot; #deep</li>
-                <li><span class="policy-index">02</span>Same session &rarr; same model. Stickiness is a rule, not a hope.</li>
-                <li><span class="policy-index">03</span>Long context &rarr; flagged for cloud, never auto-spent</li>
-                <li><span class="policy-index">04</span>Tool and agent work that fits local context &rarr; local</li>
-                <li><span class="policy-index">05</span>Small chat &rarr; local</li>
-                <li><span class="policy-index">06</span>Default &rarr; local</li>
+              <ol class="router-signals router-signals-policy" aria-label="What the policy asks, in order">
+                <li><span class="policy-index">01</span>Did you say where this goes?</li>
+                <li><span class="policy-index">02</span>Would this spend money?</li>
+                <li><span class="policy-index">03</span>Does the Mac have what it needs?</li>
+                <li><span class="policy-index">04</span>Then it stays home.</li>
               </ol>
             </div>
 
@@ -161,19 +158,13 @@
             <article class="router-receipt" aria-labelledby="receipt-title">
               <p class="development-index" id="receipt-title">Sample receipt &middot; metadata only</p>
               <dl class="receipt-rows">
-                <dt>rule fired</dt>
-                <dd>06 &middot; default &rarr; local</dd>
-                <dt>lane</dt>
-                <dd>local</dd>
-                <dt>session</dt>
-                <dd>sticky &middot; warm</dd>
-                <dt>latency</dt>
+                <dt>where it ran</dt>
+                <dd>your Mac</dd>
+                <dt>why</dt>
+                <dd>the policy said it fits</dd>
+                <dt>time &middot; tokens &middot; cost</dt>
                 <dd>logged</dd>
-                <dt>tokens</dt>
-                <dd>logged</dd>
-                <dt>cost estimate</dt>
-                <dd>logged</dd>
-                <dt>quality flags</dt>
+                <dt>quality signals</dt>
                 <dd>logged</dd>
                 <dt>prompt content</dt>
                 <dd class="receipt-never">never logged</dd>
@@ -184,13 +175,11 @@
               <p class="work-kicker">Dispatch Desk &middot; in design &middot; split plan</p>
               <h3>Split plans: the private part stays home, only the hard part goes out</h3>
               <p>
-                Dispatch Desk, the native Mac app now in design, will put a fast local triage
-                model in front of every message to <em>propose</em> a plan &mdash; local,
-                cloud, or split &mdash; with an estimated cost. It will run only after you
-                approve, with receipts; the rules above still decide anything the plan leaves
-                open. The triage brain already runs on the founder's Mac: 0.4&nbsp;s warm,
-                measured. Measured example: summarize a 40-page PDF, then write a legal-grade
-                memo. The split keeps the PDF on the Mac.
+                Dispatch Desk, the native Mac app now in design, will read each request on
+                your Mac first and <em>propose</em> a plan &mdash; local, cloud, or split
+                &mdash; with an estimated cost. It runs only after you approve, with receipts.
+                Example: summarize a 40-page PDF, then write a legal-grade memo. The PDF never
+                leaves the Mac; only a summary and the instructions do.
               </p>
               <ol class="split-flow" aria-label="Split plan example">
                 <li class="split-step split-step-local">
@@ -226,19 +215,18 @@
               <span class="router-card-index">01</span>
               <h3>Private by default</h3>
               <p>
-                Local is the default lane. Work moves to the cloud only when you send it there
-                &mdash; a token you typed, a lane you chose, or a plan you approved. Overrides
-                are never read from file contents or tool results, so a cloned repo with
-                &ldquo;#cloud&rdquo; in it cannot exfiltrate a local conversation.
+                Local is the default. Work moves to the cloud only when you send it there
+                &mdash; by your word, your lane, or a plan you approved. Nothing inside a file,
+                a repo, or a tool's output can redirect it.
               </p>
             </article>
             <article class="router-card">
               <span class="router-card-index">02</span>
               <h3>No surprise spend</h3>
               <p>
-                The router never auto-spends. Long-context work is flagged for the cloud and
-                waits for your call. Money moves only when you decided it should, and the receipt
-                shows exactly which work earned it.
+                The router never auto-spends. Anything that would cost money waits for your
+                call. Money moves only when you decided it should, and the receipt shows
+                exactly which work earned it.
               </p>
             </article>
             <article class="router-card">
@@ -246,8 +234,7 @@
               <h3>Evidence when the cheap route was wrong</h3>
               <p>
                 Routing up wastes money you can see. Routing down gives you a worse answer you
-                don't. Degradation flags &mdash; malformed tool calls, truncation, loops, an
-                immediate retry &mdash; ride on every receipt, so &ldquo;local was good
+                don't. Quality signals ride on every receipt, so &ldquo;local was good
                 enough&rdquo; is a claim you can check instead of take on faith.
               </p>
             </article>
@@ -255,9 +242,9 @@
               <span class="router-card-index">04</span>
               <h3>Nothing captive</h3>
               <p>
-                Project notes and standing instructions live as plain files you own, exportable
-                as CLAUDE.md or AGENTS.md, so any model can pick up the work tomorrow. Files, not
-                custody. Swap the model when a better one ships; the work comes with you.
+                Your project notes and standing instructions live as plain files you own,
+                readable by any model or tool, so the work comes with you when a better model
+                ships. Files, not custody.
               </p>
             </article>
           </div>
@@ -471,8 +458,7 @@
                   <h4>Inferencer Admin MCP</h4>
                   <p>
                     A local AI operations layer for managing, evaluating, and coordinating
-                    on-device models. It supplies the model inventory and health signals underneath
-                    Vega Router's local lane.
+                    on-device models.
                   </p>
                 </article>
 
