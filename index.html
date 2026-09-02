@@ -6,13 +6,13 @@
     <title>Vega LLC | Custom Software Development</title>
     <meta
       name="description"
-      content="Vega LLC builds practical software products and development systems across local AI, workflow automation, knowledge operations, mobile tools, and infrastructure."
+      content="Vega LLC builds practical software products and development systems across local AI, hybrid local-and-cloud model routing, workflow automation, knowledge operations, mobile tools, and infrastructure."
     >
     <link rel="canonical" href="https://vegalending.com/">
     <meta property="og:title" content="Vega LLC | Custom Software Development">
     <meta
       property="og:description"
-      content="Practical software products and development systems spanning local AI, workflow automation, knowledge operations, mobile tools, and infrastructure."
+      content="Practical software products and development systems spanning local AI, hybrid model routing, workflow automation, knowledge operations, mobile tools, and infrastructure."
     >
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vegalending.com/">
@@ -25,12 +25,13 @@
         "@type": "Organization",
         "name": "Vega LLC",
         "url": "https://vegalending.com/",
-        "description": "New York City area software company building practical products and development systems across local AI, workflow automation, knowledge operations, mobile tools, and infrastructure.",
+        "description": "New York City area software company building practical products and development systems across local AI, hybrid local-and-cloud model routing, workflow automation, knowledge operations, mobile tools, and infrastructure.",
         "sameAs": [
           "https://github.com/vega-llc",
           "https://ai-term.com/",
           "https://ballistictracker.com/",
-          "https://expenseonthego.com/"
+          "https://expenseonthego.com/",
+          "https://palmscanai.com/"
         ]
       }
     </script>
@@ -47,6 +48,7 @@
         <div class="nav-links" aria-label="Primary navigation">
           <a href="#company">Company</a>
           <a href="#work">Work</a>
+          <a href="#router">Router</a>
           <a href="#development">Development</a>
           <a href="#capabilities">Capabilities</a>
           <a href="#contact">Contact</a>
@@ -76,6 +78,7 @@
             <li><a href="https://ai-term.com/">AI-Term</a></li>
             <li><a href="https://ballistictracker.com/">BallisticTracker</a></li>
             <li><a href="https://expenseonthego.com/">ExpenseOnTheGo</a></li>
+            <li><a href="https://palmscanai.com/">PalmScan AI</a></li>
           </ul>
         </div>
       </section>
@@ -197,7 +200,116 @@
                 and corporate expense workflows without adding unnecessary complexity.
               </p>
             </article>
+
+            <article class="work-card">
+              <div class="work-visual product-logo-visual palmscan-logo" aria-hidden="true">
+                <img
+                  src="assets/products/palmscan-mark.svg"
+                  width="640"
+                  height="640"
+                  alt=""
+                  loading="lazy"
+                >
+              </div>
+              <p class="work-kicker">Consumer AI vision</p>
+              <h3><a href="https://palmscanai.com/">PalmScan AI</a></h3>
+              <p>
+                An entertainment product with serious machinery underneath. Vision AI reads the
+                actual lines and mounts in a photograph of your hand, then writes a
+                seven-chapter reading from what it finds there — no templates, no account, and
+                the photo is never stored. It runs the whole pipeline in the browser in about
+                thirty seconds.
+              </p>
+            </article>
           </div>
+        </div>
+      </section>
+
+      <section id="router" class="section router-section" aria-labelledby="router-title">
+        <div class="container">
+          <div class="section-heading router-heading">
+            <p class="eyebrow">In design &middot; Vega Router</p>
+            <h2 id="router-title">The missing middle of personal AI.</h2>
+            <p>
+              Local models are private, always available, and free at the margin &mdash; but
+              capped. Frontier models are extraordinary &mdash; but metered, remote, and shown
+              everything you send them. Today you pick one and live with the tradeoff. Vega
+              Router is being built to remove the choice: it reads each request and sends it
+              where it belongs.
+            </p>
+          </div>
+
+          <div class="router-flow">
+            <article class="router-node router-node-local">
+              <p class="router-node-label">On device</p>
+              <h3>Apple Silicon</h3>
+              <p>
+                Open-weight models running locally on M-series Macs, where up to 128&nbsp;GB of
+                unified memory keeps a large model resident and warm. Drafting, summarizing,
+                classifying, extracting, and anything touching private files. No network hop,
+                no per-token cost.
+              </p>
+            </article>
+
+            <div class="router-core">
+              <span class="router-core-mark" aria-hidden="true">VR</span>
+              <h3>The routing layer</h3>
+              <p>Every request is scored before it moves anywhere.</p>
+              <ul class="router-signals">
+                <li>Sensitivity of the data in play</li>
+                <li>Reasoning depth the task actually needs</li>
+                <li>Context size and working memory</li>
+                <li>Latency budget and current connectivity</li>
+                <li>Cost ceiling for the session</li>
+              </ul>
+            </div>
+
+            <article class="router-node">
+              <p class="router-node-label">Frontier cloud</p>
+              <h3>Claude &middot; GPT &middot; Gemini</h3>
+              <p>
+                Escalation for long-horizon reasoning, deep research, and hard engineering
+                &mdash; the work that genuinely needs the largest models. Reached deliberately,
+                after the local tier has already handled everything it could.
+              </p>
+            </article>
+          </div>
+
+          <div class="router-outcomes">
+            <article class="router-outcome">
+              <h3>Private by default</h3>
+              <p>
+                Sensitive work stays on the machine unless routing decides otherwise &mdash;
+                and the reason it decided is visible to you.
+              </p>
+            </article>
+            <article class="router-outcome">
+              <h3>A real cost floor</h3>
+              <p>
+                The routine majority of requests never leaves the Mac, so the metered bill
+                covers only the work that earns it.
+              </p>
+            </article>
+            <article class="router-outcome">
+              <h3>Keeps working offline</h3>
+              <p>
+                Without a connection the system degrades to the local tier instead of stopping
+                mid-task.
+              </p>
+            </article>
+            <article class="router-outcome">
+              <h3>No model lock-in</h3>
+              <p>
+                The routing layer is the product. Providers and open weights are swapped
+                underneath it as the field moves.
+              </p>
+            </article>
+          </div>
+
+          <p class="router-note">
+            Vega Router is in active design. Positioning and capability descriptions here
+            reflect current direction, not a shipped feature list.
+          </p>
         </div>
       </section>
 
@@ -244,7 +356,8 @@
                   <h4>Inferencer Admin MCP</h4>
                   <p>
                     A local AI operations layer for managing, evaluating, and coordinating
-                    on-device models.
+                    on-device models. It supplies the model inventory, benchmarks, and health
+                    signals that Vega Router's decisions depend on.
                   </p>
                 </article>
 
@@ -476,6 +589,7 @@
           <a href="https://ai-term.com/">AI-Term</a>
           <a href="https://ballistictracker.com/">BallisticTracker</a>
           <a href="https://expenseonthego.com/">ExpenseOnTheGo</a>
+          <a href="https://palmscanai.com/">PalmScan AI</a>
           <a href="https://github.com/vega-llc">GitHub</a>
         </div>
       </div>

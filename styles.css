@@ -398,6 +398,15 @@ a:hover {
   background: #eef5ee;
 }
 
+.palmscan-logo {
+  background: #f1eefb;
+}
+
+.palmscan-logo img {
+  width: min(56%, 8rem);
+  max-height: 8rem;
+}
+
 .work-kicker {
   margin: 0 0 0.45rem;
   color: var(--teal-deep);
@@ -419,6 +428,148 @@ a:hover {
 .work-card p:last-child {
   margin: 0.75rem 0 0;
   color: var(--ink-soft);
+}
+
+.router-section {
+  background: #eef3f0;
+}
+
+.router-heading {
+  max-width: 840px;
+}
+
+.router-flow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.router-node,
+.router-core {
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.router-node {
+  --node-accent: var(--blue);
+  border-top: 3px solid var(--node-accent);
+}
+
+.router-node-local {
+  --node-accent: var(--amber);
+}
+
+.router-node-label {
+  margin: 0 0 0.45rem;
+  color: var(--node-accent);
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.router-node h3,
+.router-core h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
+
+.router-node p:last-child,
+.router-core p {
+  margin: 0.75rem 0 0;
+  color: var(--ink-soft);
+}
+
+.router-core {
+  position: relative;
+  border-top: 3px solid var(--teal);
+  background: var(--ink);
+  color: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.router-core h3 {
+  margin-top: 1.15rem;
+}
+
+.router-core p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.router-core-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  background: rgba(41, 169, 139, 0.18);
+  color: #6ee3c7;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.router-signals {
+  display: grid;
+  gap: 0;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.95rem;
+}
+
+.router-signals li {
+  padding: 0.6rem 0 0.6rem 1.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  position: relative;
+}
+
+.router-signals li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.15rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: #6ee3c7;
+}
+
+.router-outcomes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 2.5rem;
+  border-top: 1px solid rgba(17, 22, 20, 0.16);
+}
+
+.router-outcome {
+  padding: 1.35rem 0;
+  border-bottom: 1px solid rgba(17, 22, 20, 0.16);
+}
+
+.router-outcome h3 {
+  margin: 0;
+  font-size: 1.12rem;
+}
+
+.router-outcome p {
+  margin: 0.35rem 0 0;
+  color: var(--ink-soft);
+}
+
+.router-note {
+  max-width: 680px;
+  margin: 1.75rem 0 0;
+  color: rgba(17, 22, 20, 0.6);
+  font-size: 0.94rem;
 }
 
 .development-section {
@@ -745,7 +896,12 @@ a:hover {
   }
 
   .work-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .router-outcomes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2.5rem;
   }
 
   .development-grid {
@@ -809,6 +965,38 @@ a:hover {
 
   .development-grid-one {
     grid-template-columns: minmax(0, 760px);
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .router-flow {
+    grid-template-columns: 1fr 1.12fr 1fr;
+    gap: 3.25rem;
+    align-items: center;
+  }
+
+  .router-core::before,
+  .router-core::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 3.25rem;
+    border-top: 1px dashed rgba(17, 22, 20, 0.34);
+  }
+
+  .router-core::before {
+    right: 100%;
+  }
+
+  .router-core::after {
+    left: 100%;
+  }
+
+  .router-outcomes {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 2rem;
   }
 }
 

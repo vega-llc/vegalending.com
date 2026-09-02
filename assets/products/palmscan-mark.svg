@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-label="PalmScan AI">
+  <g fill="#7c5cdb">
+    <path d="M186 428 110 358" stroke="#7c5cdb" stroke-width="64" stroke-linecap="round" fill="none"/>
+    <rect x="192" y="150" width="58" height="190" rx="29"/>
+    <rect x="262" y="112" width="58" height="228" rx="29"/>
+    <rect x="332" y="134" width="58" height="206" rx="29"/>
+    <rect x="402" y="190" width="58" height="150" rx="29"/>
+    <path d="M180 300h282v150a141 140 0 0 1-282 0V300z"/>
+  </g>
+  <g fill="none" stroke="#f7cf6b" stroke-width="18" stroke-linecap="round">
+    <path d="M202 396c48 46 154 52 228 4"/>
+    <path d="M198 452c62 44 150 48 206 18"/>
+    <path d="M248 386c-14 82 16 144 68 180"/>
+    <path d="M372 556c6-70 2-116-6-154"/>
+  </g>
+</svg>
