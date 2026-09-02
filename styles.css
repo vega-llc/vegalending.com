@@ -781,18 +781,14 @@ a:hover {
   border-left: 3px solid var(--teal);
 }
 
-.router-quote blockquote {
-  margin: 0;
-}
-
-.router-quote blockquote p {
+.router-thesis {
   margin: 0;
   font-size: 1.5rem;
   font-weight: 750;
   line-height: 1.15;
 }
 
-.router-quote figcaption {
+.router-thesis-note {
   margin: 0.75rem 0 0;
   color: var(--ink-soft);
   font-size: 0.94rem;
@@ -1201,7 +1197,7 @@ a:hover {
     font-weight: 400;
   }
 
-  .router-quote blockquote p {
+  .router-thesis {
     font-size: 1.85rem;
   }
 
