@@ -1,45 +1,22 @@
 (() => {
   "use strict";
-  const demo = document.querySelector(".router-demo");
-  if (!demo) return;
-  // Deliberately illustrative. These choices never call a model or send data.
-  const scenarios = {
-    notes: {
-      route: "local", task: "Summarize notes", policy: "Policy: local only",
-      local: "Selected", cloud: "Not requested", receiptRoute: "Local",
-      reason: "Local-only policy", cloudRequest: "None",
-      explanation: "This example keeps the task on the Mac because the user chose a local-only policy. No cloud request is made."
-    },
-    code: {
-      route: "cloud", task: "Review code", policy: "Choice: cloud review",
-      local: "Not selected", cloud: "Explicitly requested", receiptRoute: "Cloud",
-      reason: "User requested cloud", cloudRequest: "Authorized in example",
-      explanation: "Here, the user explicitly requests a cloud review. The illustration follows that choice and records the reason. No real code or request is sent."
-    },
-    report: {
-      route: "blocked", task: "Draft a report", policy: "Cloud approval missing",
-      local: "Not run", cloud: "Waiting for approval", receiptRoute: "Paused",
-      reason: "Approval required", cloudRequest: "None",
-      explanation: "This example requires cloud approval before it can continue. The request pauses instead of silently sending work out or spending money."
-    }
-  };
-  const fields = {
-    "demo-task": "task", "demo-policy": "policy", "local-status": "local",
-    "cloud-status": "cloud", "receipt-route": "receiptRoute",
-    "receipt-reason": "reason", "receipt-cloud": "cloudRequest",
-    "demo-explanation": "explanation"
-  };
-  demo.querySelectorAll("[data-scenario]").forEach(button => {
-    button.addEventListener("click", () => {
-      const scenario = scenarios[button.dataset.scenario];
-      if (!scenario) return;
-      demo.dataset.route = scenario.route;
-      demo.querySelectorAll("[data-scenario]").forEach(option =>
-        option.setAttribute("aria-pressed", String(option === button))
-      );
-      Object.entries(fields).forEach(([id, field]) => {
-        document.getElementById(id).textContent = scenario[field];
-      });
-    });
-  });
+  const dialog=document.getElementById('image-dialog');
+  document.querySelectorAll('[data-desk]').forEach(button=>button.addEventListener('click',()=>{
+  document.querySelectorAll('[data-desk]').forEach(option=>option.setAttribute('aria-pressed',String(option===button)));
+  document.querySelectorAll('[data-desk-panel]').forEach(panel=>panel.hidden=panel.dataset.deskPanel!==button.dataset.desk);
+  }));
+  document.querySelectorAll('.image-button').forEach(button=>button.addEventListener('click',()=>{
+  const img=document.getElementById('large-image');img.src=button.dataset.image;img.alt=button.dataset.caption;
+  document.getElementById('image-caption').textContent=button.dataset.caption;dialog.showModal();
+  }));
+  document.getElementById('close-image').addEventListener('click',()=>dialog.close());
+  dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
+  document.querySelectorAll('[data-expense]').forEach(button=>button.addEventListener('click',()=>{
+  const reports=button.dataset.expense==='reports';const src=reports?'assets/expense-reports.png':'assets/expense-receipts.png';
+  const image=document.getElementById('expense-phone-image');image.src=src;image.alt=reports?'ExpenseOnTheGo iPhone report options':'ExpenseOnTheGo iPhone receipt list';
+  const view=document.getElementById('expense-view');view.dataset.image=src;view.dataset.caption=reports?'ExpenseOnTheGo 2.0 — iPhone reports':'ExpenseOnTheGo 2.0 — iPhone receipts';view.setAttribute('aria-label',reports?'Enlarge ExpenseOnTheGo reports':'Enlarge ExpenseOnTheGo receipts');
+  document.getElementById('expense-phone-caption').textContent=reports?'Reports, ready to prepare':'Receipts, ready to review';
+  document.querySelectorAll('[data-expense]').forEach(option=>option.setAttribute('aria-pressed',String(option===button)));
+  }));
+
 })();

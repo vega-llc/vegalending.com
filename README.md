@@ -4,26 +4,25 @@ Static marketing site for Vega LLC at `vegalending.com`.
 
 ## Local Preview
 
-Open `index.html` in a browser. No build step is required.
+Run `python3 -m http.server 8772 --bind 127.0.0.1` and open `http://127.0.0.1:8772/`. No build step is required.
 
-## Recommended Repository
-
-Create a GitHub repository under the Vega LLC organization:
+## Repository
 
 ```text
 vega-llc/vegalending.com
 ```
 
-That name is explicit, easy to find later, and keeps the domain mapped to one source repository.
+## Deployment
 
-## Hosting Recommendation
+GitHub Pages publishes the repository root from `main` through the generated "pages build and deployment" workflow. The `CNAME` file maps it to `vegalending.com`; `.nojekyll` preserves the plain static files.
 
-Best default: keep the source in GitHub and deploy the static site through Cloudflare Pages if the domain is already managed in Cloudflare. That gives simple rollbacks, CDN caching, HTTPS, and future room for Workers or redirects.
+Before publishing, run `git diff --check`, `node --check script.js`, and `xmllint --noout sitemap.xml`. Check responsive layouts, screenshot enlargement, and the interactive panels. Push the approved commit to `main`, confirm the matching Pages workflow succeeds, then verify the live page and its assets. A rollback is a new revert commit of the deployment commit, followed by the same checks and push.
 
-Simplest option: use GitHub Pages directly from the `main` branch. The included `CNAME` file is already set to `vegalending.com`.
+## Content and assets
 
-## Before Launch
-
-- Contact email is `dev@vegalending.com`.
-- Confirm whether `vegalending.com` is the intended long-term domain, since the name can read as lending rather than software.
-- Add the required DNS records from the selected host.
+- Product order: DispatchDesk, AI-Term, BallisticTracker, ExpenseOnTheGo, PalmScan AI.
+- Keep public development descriptions generic and do not expose private repository links.
+- AI-Term uses the two user-selected September 2026 screenshots, unaltered. BallisticTracker and ExpenseOnTheGo use actual product captures.
+- DispatchDesk's interactive panel is a labeled interface study, not a live model connection. PalmScan's hand image is a labeled generated concept, not a customer photograph or verified reading.
+- Site typography uses Helvetica Neue with system fallbacks. Fonts within product screenshots remain unchanged.
+- Contact email: `dev@vegalending.com`.
