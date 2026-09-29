@@ -20,7 +20,8 @@ Before publishing, run `git diff --check`, `node --check script.js`, and `xmllin
 
 ## Content and assets
 
-- Product order: DispatchDesk, AI-Term, BallisticTracker, ExpenseOnTheGo, PalmScan AI.
+- Product order: AI-Term, HorologyRadar (coming soon), DispatchDesk, BallisticTracker, ExpenseOnTheGo, PalmScan AI.
+- HorologyRadar links to `https://horologyradar.com/`. Describe it as a product in development; its decorative watch dial is not a product screenshot.
 - Keep public development descriptions generic and do not expose private repository links.
 - AI-Term uses the two user-selected September 2026 screenshots, unaltered. BallisticTracker and ExpenseOnTheGo use actual product captures.
 - DispatchDesk's interactive panel is a labeled interface study, not a live model connection. PalmScan's hand image is a labeled generated concept, not a customer photograph or verified reading.
